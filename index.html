@@ -204,6 +204,43 @@ footer{padding:24px 16px;text-align:center;font-size:12px;color:#7b837c;backgrou
 .plan-bonus-list li:before{content:"🎁";flex:0 0 auto}
 @media(max-width:600px){.bonus-section{padding:52px 0 44px}.bonus-item{grid-template-columns:82px minmax(0,1fr);gap:12px;padding:12px}.bonus-photo{width:82px;border-radius:10px}.bonus-copy h3{font-size:15px}.bonus-copy p{font-size:12px}.bonus-price{grid-column:2;justify-self:start;display:flex;align-items:center;gap:8px;padding:6px 10px;min-width:0}.bonus-price .free{font-size:17px}.bonus-price .zero{font-size:12px}.bonus-fallback{font-size:30px}}
 
+
+/* Fotos das avaliações: centralizadas e compactas */
+.review-photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 18px auto 20px;
+}
+
+.review-photo {
+  display: block;
+  width: min(100%, 300px);
+  max-height: 240px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  background: #faf9f5;
+  border: 1px solid #e7e8df;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+/* Mantém o conteúdo organizado em celulares */
+@media (max-width: 560px) {
+  .review-photo-wrap {
+    margin: 15px auto 17px;
+  }
+
+  .review-photo {
+    width: min(100%, 260px);
+    max-height: 210px;
+    border-radius: 12px;
+  }
+}
+
+  
 </style>
 </head>
 <body>
@@ -326,49 +363,171 @@ footer{padding:24px 16px;text-align:center;font-size:12px;color:#7b837c;backgrou
   </div>
 </section>
 
+
 <section class="section white" id="avaliacoes">
   <div class="wrap">
     <div class="section-head">
+      <div class="kicker">Opiniões e inspirações</div>
       <h2>Experiências com o artesanato:</h2>
+      <p>Confira as avaliações e veja as imagens de cada projeto.</p>
     </div>
+
     <div class="reviews-wrap">
       <div class="reviews-window">
         <div class="reviews-track" id="reviewsTrack">
+
+          <!-- AVALIAÇÃO 1 -->
           <article class="review-card" aria-label="Avaliação 1 de 5">
-            <div class="review-top"><div class="review-avatar"><img src="foto-avaliacao-1.jpg" alt="Foto de perfil de Mariana" loading="lazy" onerror="this.remove();this.parentElement.setAttribute('data-placeholder','Adicionar foto');"></div><div><div class="review-name">Mariana Alves</div><div class="review-context">Decoração de casa</div></div></div>
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="perfil-avaliacao-1.jpg"
+                     alt="Foto de perfil de Mariana"
+                     loading="lazy">
+              </div>
+              <div>
+                <div class="review-name">Mariana Alves</div>
+                <div class="review-context">Decoração de casa</div>
+              </div>
+            </div>
+
             <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+
+            <div class="review-photo-wrap">
+              <img class="review-photo"
+                   src="foto-avaliacao-1.jpg"
+                   alt="Imagem da avaliação de Mariana"
+                   loading="lazy">
+            </div>
+
             <p class="review-text">“Quero preparar alguns enfeites diferentes para a casa e ter os moldes organizados facilita bastante na hora de escolher o que fazer.”</p>
           </article>
+
+          <!-- AVALIAÇÃO 2 -->
           <article class="review-card" aria-label="Avaliação 2 de 5">
-            <div class="review-top"><div class="review-avatar"><img src="foto-avaliacao-2.jpg" alt="Foto de perfil de Renata" loading="lazy" onerror="this.remove();this.parentElement.setAttribute('data-placeholder','Adicionar foto');"></div><div><div class="review-name">Renata Martins</div><div class="review-context">Professora</div></div></div>
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="perfil-avaliacao-2.jpg"
+                     alt="Foto de perfil de Renata"
+                     loading="lazy">
+              </div>
+              <div>
+                <div class="review-name">Renata Martins</div>
+                <div class="review-context">Professora</div>
+              </div>
+            </div>
+
             <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+
+            <div class="review-photo-wrap">
+              <img class="review-photo"
+                   src="foto-avaliacao-2.jpg"
+                   alt="Imagem da avaliação de Renata"
+                   loading="lazy">
+            </div>
+
             <p class="review-text">“Estou reunindo ideias para o período de Natal na escola. Os formatos servem como referência para planejar painéis e atividades com tema natalino.”</p>
           </article>
+
+          <!-- AVALIAÇÃO 3 -->
           <article class="review-card" aria-label="Avaliação 3 de 5">
-            <div class="review-top"><div class="review-avatar"><img src="foto-avaliacao-3.jpg" alt="Foto de perfil de Patrícia" loading="lazy" onerror="this.remove();this.parentElement.setAttribute('data-placeholder','Adicionar foto');"></div><div><div class="review-name">Patrícia Nogueira</div><div class="review-context">Artesanato e lembrancinhas</div></div></div>
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="perfil-avaliacao-3.jpg"
+                     alt="Foto de perfil de Patrícia"
+                     loading="lazy">
+              </div>
+              <div>
+                <div class="review-name">Patrícia Nogueira</div>
+                <div class="review-context">Artesanato e lembrancinhas</div>
+              </div>
+            </div>
+
             <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+
+            <div class="review-photo-wrap">
+              <img class="review-photo"
+                   src="foto-avaliacao-3.jpg"
+                   alt="Imagem da avaliação de Patrícia"
+                   loading="lazy">
+            </div>
+
             <p class="review-text">“Gosto de adaptar as peças com minhas próprias cores e detalhes. Ter um contorno como ponto de partida ajuda a tirar as ideias do papel.”</p>
           </article>
+
+          <!-- AVALIAÇÃO 4 -->
           <article class="review-card" aria-label="Avaliação 4 de 5">
-            <div class="review-top"><div class="review-avatar"><img src="foto-avaliacao-4.jpg" alt="Foto de perfil de Camila" loading="lazy" onerror="this.remove();this.parentElement.setAttribute('data-placeholder','Adicionar foto');"></div><div><div class="review-name">Camila Ribeiro</div><div class="review-context">Mãe e atividades em família</div></div></div>
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="perfil-avaliacao-4.jpg"
+                     alt="Foto de perfil de Camila"
+                     loading="lazy">
+              </div>
+              <div>
+                <div class="review-name">Camila Ribeiro</div>
+                <div class="review-context">Mãe e atividades em família</div>
+              </div>
+            </div>
+
             <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+
+            <div class="review-photo-wrap">
+              <img class="review-photo"
+                   src="foto-avaliacao-4.jpg"
+                   alt="Imagem da avaliação de Camila"
+                   loading="lazy">
+            </div>
+
             <p class="review-text">“Quero fazer alguns enfeites com a família durante as férias. Achei interessante poder escolher os desenhos e ajustar o tamanho conforme a ideia.”</p>
           </article>
+
+          <!-- AVALIAÇÃO 5 -->
           <article class="review-card" aria-label="Avaliação 5 de 5">
-            <div class="review-top"><div class="review-avatar"><img src="foto-avaliacao-5.jpg" alt="Foto de perfil de Sônia" loading="lazy" onerror="this.remove();this.parentElement.setAttribute('data-placeholder','Adicionar foto');"></div><div><div class="review-name">Sônia Ferreira</div><div class="review-context">Artesã iniciante</div></div></div>
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="perfil-avaliacao-5.jpg"
+                     alt="Foto de perfil de Sônia"
+                     loading="lazy">
+              </div>
+              <div>
+                <div class="review-name">Sônia Ferreira</div>
+                <div class="review-context">Artesã iniciante</div>
+              </div>
+            </div>
+
             <div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+
+            <div class="review-photo-wrap">
+              <img class="review-photo"
+                   src="foto-avaliacao-5.jpg"
+                   alt="Imagem da avaliação de Sônia"
+                   loading="lazy">
+            </div>
+
             <p class="review-text">“Estou começando a trabalhar com E.V.A. e referências prontas deixam o processo menos intimidador. Quero usar os moldes para praticar e personalizar as peças.”</p>
           </article>
+
         </div>
       </div>
+
       <div class="review-controls" aria-label="Controles das avaliações">
-        <button class="review-arrow" type="button" id="reviewPrev" aria-label="Avaliação anterior" disabled>‹</button>
+        <button class="review-arrow"
+                type="button"
+                id="reviewPrev"
+                aria-label="Avaliação anterior"
+                disabled>‹</button>
+
         <span class="review-count" id="reviewCount" aria-live="polite">1 / 5</span>
-        <button class="review-arrow" type="button" id="reviewNext" aria-label="Próxima avaliação">›</button>
+
+        <button class="review-arrow"
+                type="button"
+                id="reviewNext"
+                aria-label="Próxima avaliação">›</button>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <section class="section green-bg">
   <div class="wrap">
